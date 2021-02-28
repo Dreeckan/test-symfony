@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Les articles du blog
+{% endblock %}
+
+{% block body %}
+
+	{% for article in articles %}
+		<article>
+			<header>
+				<h2>
+					{{ article.title }}
+				</h2>
+				<span class="tag">
+					{{ article.tag.name }}
+				</span>
+			</header>
+			<p>
+				{{ article.content|nl2br }}
+			</p>
+		</article>
+	{% else %}
+		Il n'y a pas d'articles !
+	{% endfor %}
+
+{% endblock %}

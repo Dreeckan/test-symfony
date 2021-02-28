@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Les compositeurs
+{% endblock %}
+
+{% block body %}
+	<table>
+		<tr>
+			<th>Identifiant</th>
+			<th>Nom</th>
+			<th>Description</th>
+			<th>Année de naissance / décès</th>
+		</tr>
+		{% for composer in composers %}
+			<tr>
+				<td>
+					{{ composer.id }}
+				</td>
+				<td>
+					{{ composer.name }}
+				</td>
+				<td>
+					{{ composer.description }}
+				</td>
+				<td>
+					Né en
+					{{ composer.birth }}
+					en
+					{{ composer.birthCountry }}<br/>
+					Décédé en
+					{{ composer.death }}
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

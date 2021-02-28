@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ composer.name }}
+{% endblock %}
+
+{% block body %}
+	<h1>
+		{{ composer.name }}
+	</h1>
+	{{ composer.name }}
+	est né en
+	{{ composer.birth }}
+	en
+	{{ composer.birthCountry }}
+	{% if composer.death %}
+		et mort en
+		{{ composer.death }}
+	{% endif %}
+	<p>
+		{{ composer.description|nl2br }}
+	</p>
+	<ul>
+		{% for music in composer.musics %}
+			<li>
+				{{ music.name }}
+				({{ music.year }})
+			</li>
+		{% else %}
+			<li>
+				Aucun morceau recencé
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

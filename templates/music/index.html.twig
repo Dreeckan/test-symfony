@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MusicController!
+{% endblock %}
+
+{% block body %}
+	{% for music in musics %}
+		{% if music.composer.name is defined %}
+			{{ music.composer.name }}
+		{% else %}
+			Pas de compositeur
+		{% endif %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DevBook - Bootstrap 4 Book/eBook Landing Page Template For Developers
+{% endblock %}
+
+{% block bodyHeader %}
+	<header class="header">
+		<div class="branding">
+			<div class="container-fluid position-relative py-3">
+				<div class="logo-wrapper">
+					<div class="site-logo">
+						<a class="navbar-brand" href="{{ path('integration_index') }}">
+							<img class="logo-icon mr-2" src="{{ asset('assets/images/site-logo.svg') }}" alt="logo">
+							<span class="logo-text">DevBook</span>
+						</a>
+					</div>
+				</div>
+				<!--//docs-logo-wrapper-->
+
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
+{% endblock %}
+
+{% block body %}
+	{% include "integration/_hero-section.html.twig" %}
+	{% include "integration/_benefits-section.html.twig" %}
+	{% include "integration/_content-section.html.twig" %}
+{% endblock %}
+
+{% block bodyFooter %}
+	<footer class="footer">
+		<div
+			class="footer-bottom text-center py-5">
+
+			<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			<small class="copyright">Designed with
+				<i class="fas fa-heart" style="color: #fb866a;"></i>
+				by
+				<a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a>
+				for developers</small>
+		</div>
+	</footer>
+{% endblock %}
+
+
+{% block javascripts %}
+	<!-- Javascript -->
+	<script src="{{ asset('assets/plugins/jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/popper.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/jquery.scrollTo.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
+
+	<script src="{{ asset('assets/js/main.js') }}"></script>
+{% endblock %}
+
+{% block meta %}
+	<!-- Meta -->
+	<meta name="description" content="Bootstrap 4 Book/eBook Landing Page Template For Developers">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+{% endblock %}
+
+{% block stylesheets %}
+	<link
+	rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link
+	href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="{{ asset('assets/css/theme.css') }}">
+{% endblock %}
+
+{% block headerJavascripts %}
+	<!-- FontAwesome JS-->
+	<script defer src="{{ asset('assets/fontawesome/js/all.min.js') }}"></script>
+{% endblock %}
